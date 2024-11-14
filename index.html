@@ -38,15 +38,21 @@
             justify-content: center;
             gap: 30px;
             margin-bottom: 20px;
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
         }
         .box {
-            width: 480px; /* Double the width for larger size */
-            height: 250px; /* Increase the height for larger content */
+            width: 480px; /* Ensure box is wide enough */
+            min-height: 250px; /* Set a minimum height */
+            max-height: 600px; /* Set a max height for large content */
             padding: 30px; /* Increased padding for larger content */
             background-color: rgba(0, 0, 0, 0.6);
             border: 1px solid #ccc;
             border-radius: 10px;
             text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-y: auto; /* Allow content to overflow if it exceeds the box height */
         }
         h1 {
             font-size: 2.5em; /* Increased header font size */
@@ -157,4 +163,5 @@
     </script>
 </body>
 </html>
+
 
