@@ -1,13 +1,75 @@
-<div class="caspio-search-container">
-    <!-- Caspio search form or input field -->
-    <input type="text" id="search-field" placeholder="Search for something...">
-    <button type="button" onclick="searchFunction()">Search</button>
-</div>
-
-<script>
-    function searchFunction() {
-        var query = document.getElementById('search-field').value;
-        console.log('Search query: ', query);
-        // Implement your search functionality here (Caspio search logic)
+<style>
+    /* Style the search container */
+    .caspio-search-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 25px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
-</script>
+
+    /* Style the search input field */
+    .caspio-search-container input {
+        border: none;
+        outline: none;
+        padding: 10px 20px;
+        font-size: 1.2em;
+        border-radius: 20px;
+        background-color: #f4f4f4;
+        color: #333;
+        transition: background-color 0.3s ease;
+        width: 300px;
+    }
+
+    /* Input field focus effect */
+    .caspio-search-container input:focus {
+        background-color: #e0e0e0;
+        box-shadow: 0 0 10px rgba(255, 165, 0, 0.5); /* Soft orange glow */
+    }
+
+    /* Style for search button */
+    .caspio-search-container button {
+        background-color: #1e2a47;
+        color: white;
+        font-size: 1.2em;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        margin-left: 10px;
+    }
+
+    /* Search button hover effect */
+    .caspio-search-container button:hover {
+        background-color: #f4a300; /* Bright orange on hover */
+        transform: scale(1.05);
+    }
+
+    /* Optional: Add a subtle icon inside the input (magnifying glass) */
+    .caspio-search-container input::placeholder {
+        color: #bbb;
+        font-style: italic;
+    }
+
+    /* Make it mobile responsive */
+    @media (max-width: 600px) {
+        .caspio-search-container {
+            flex-direction: column;
+            width: 90%;
+        }
+
+        .caspio-search-container input {
+            width: 100%;
+        }
+
+        .caspio-search-container button {
+            width: 100%;
+            margin-left: 0;
+            margin-top: 10px;
+        }
+    }
+</style>
