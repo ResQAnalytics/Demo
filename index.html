@@ -15,54 +15,42 @@
             background-repeat: no-repeat;
             color: #fff;
         }
-        .header, .search-container, .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 20px;
+        .header {
+            text-align: center;
+            padding: 20px;
         }
         .header h1 {
             text-transform: uppercase;
             font-size: 2.5em;
             font-weight: bold;
             text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+            margin-top: 0;
             color: #fff;
         }
         .search-container {
             width: 100%;
+            display: flex;
+            justify-content: center;
             margin-bottom: 30px;
         }
-        .four-box-container {
+        .container {
             display: flex;
-            justify-content: space-around;
-            width: 100%;
+            justify-content: center;
+            gap: 20px;
             margin-bottom: 20px;
         }
         .box {
-            flex: 1;
-            margin: 10px;
+            width: 200px;
             padding: 10px;
-            text-align: center;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
             background-color: rgba(0, 0, 0, 0.6);
-            color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            text-align: center;
         }
-        h3 {
+        h1 {
             font-size: 1.5em;
-            margin: 0 0 10px;
-            color: #0073e6;
-        }
-        p {
-            font-size: 2em;
-            margin: 0;
+            font-weight: bold;
             color: #fff;
-        }
-        .two-by-two-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
         }
     </style>
 </head>
@@ -75,22 +63,22 @@
         <script type="text/javascript" src="https://c2hbs301.caspio.com/dp/7e2fd000c0d7b32f2c4c4c848eda/emb"></script>
     </div>
 
-    <div class="four-box-container">
+    <div class="container">
         <div class="box">
             <h3>Number of Incidents</h3>
-            <p id="incidents">0</p>
+            <p id="incidents">0</p> <!-- Replace '0' with Caspio calculated field -->
         </div>
         <div class="box">
             <h3>Time of Lifeguard Recognition</h3>
-            <p id="recognitionTime">0</p>
+            <p id="recognitionTime">0</p> <!-- Replace '0' with Caspio calculated field -->
         </div>
         <div class="box">
             <h3>Lifeguard Hesitation Time</h3>
-            <p id="hesitationTime">0</p>
+            <p id="hesitationTime">0</p> <!-- Replace '0' with Caspio calculated field -->
         </div>
         <div class="box">
             <h3>Lifeguard Response Time</h3>
-            <p id="responseTime">0</p>
+            <p id="responseTime">0</p> <!-- Replace '0' with Caspio calculated field -->
         </div>
     </div>
 
@@ -100,7 +88,8 @@
     <h1>Attractions</h1>
     <script type="text/javascript" src="https://c2hbs301.caspio.com/dp/7e2fd000dfa362b2c56f4273b888/emb"></script>
 
-    <div class="two-by-two-container">
+    <!-- First row with "Incident" and "Sex" -->
+    <div class="container">
         <div class="box">
             <h1>Incident</h1>
             <script type="text/javascript" src="https://c2hbs301.caspio.com/dp/7e2fd00024aa4c829a7848bc84f4/emb"></script>
@@ -109,6 +98,10 @@
             <h1>Sex</h1>
             <script type="text/javascript" src="https://c2hbs301.caspio.com/dp/7e2fd000d52b140d9cef4aa89c02/emb"></script>
         </div>
+    </div>
+
+    <!-- Second row with "Guest Stage of Life" and "Proximate Cause" -->
+    <div class="container">
         <div class="box">
             <h1>Guest Stage of Life</h1>
             <script type="text/javascript" src="https://c2hbs301.caspio.com/dp/7e2fd000dd69e9e03beb446f9bfc/emb"></script>
@@ -117,6 +110,10 @@
             <h1>Proximate Cause</h1>
             <script type="text/javascript" src="https://c2hbs301.caspio.com/dp/7e2fd000ccfea7040f7f4dc7a791/emb"></script>
         </div>
+    </div>
+
+    <!-- Third row with "Life Jackets," "Type of Rescue," and "GID Reactions" -->
+    <div class="container">
         <div class="box">
             <h1>Life Jackets</h1>
             <script type="text/javascript" src="https://c2hbs301.caspio.com/dp/7e2fd00032433a870e304f56a64d/emb"></script>
@@ -130,17 +127,18 @@
             <script type="text/javascript" src="https://c2hbs301.caspio.com/dp/7e2fd000f4e582ccd2644b869ad9/emb"></script>
         </div>
     </div>
-
+    
     <script>
         // Password protection with page reload
         const password = "EAVS2024!";
-        const userInput = sessionStorage.getItem('authenticated');
+        const userInput = sessionStorage.getItem('authenticated');  // Check if session already has access
 
+        // If the user hasn't entered the password, ask for it
         if (!userInput) {
             const enteredPassword = prompt("Please enter the password:");
             if (enteredPassword === password) {
-                sessionStorage.setItem('authenticated', 'true');
-                location.reload();
+                sessionStorage.setItem('authenticated', 'true'); // Set session storage to avoid future prompts
+                location.reload();  // Reload the page so scripts can load properly
             } else {
                 document.body.innerHTML = "Access denied!";
             }
