@@ -1,125 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EAVS Dashboard</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #1e2a47;
-            color: #fff;
-        }
-        
-        /* Header styling */
-        .header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-        .header h1 {
-            text-transform: uppercase;
-            font-size: 2.5em;
-            font-weight: bold;
-            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
-            margin-top: 0;
-            color: #fff;
-            margin-right: 20px;
-        }
-        .header img {
-            width: 60px;
-            height: auto;
-        }
+<div class="caspio-search-container">
+    <!-- Caspio search form or input field -->
+    <input type="text" id="search-field" placeholder="Search for something...">
+    <button type="button" onclick="searchFunction()">Search</button>
+</div>
 
-        /* Search Filter Container */
-        .search-container {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        /* Enhanced search box */
-        .search-box {
-            display: flex;
-            align-items: center;
-            border-radius: 25px;
-            background-color: #fff;
-            padding: 10px 20px;
-            width: 300px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
-
-        /* Search input field */
-        .search-box input {
-            border: none;
-            outline: none;
-            font-size: 1.2em;
-            color: #333;
-            width: 100%;
-            background: transparent;
-            padding: 5px;
-            border-radius: 25px;
-            transition: all 0.3s ease;
-        }
-
-        .search-box input:focus {
-            background-color: #f0f0f0;
-            box-shadow: 0 0 10px rgba(255, 165, 0, 0.5); /* Subtle orange glow on focus */
-        }
-
-        /* Search button */
-        .search-box button {
-            background-color: #1e2a47;
-            border: none;
-            color: white;
-            font-size: 1.2em;
-            padding: 10px;
-            border-radius: 50%;
-            margin-left: 10px;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-
-        .search-box button:hover {
-            background-color: #f4a300; /* Orange on hover */
-            transform: scale(1.1); /* Slight grow effect */
-        }
-
-        .search-box button:focus {
-            outline: none;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="header">
-        <h1>EAVS Rescue Dashboard</h1>
-        <img src="https://www.paamusementparks.com/wp-content/uploads/2019/01/J-E-Rsk-Mngmt-Cnsltnt-copy.jpg" alt="Background Image">
-    </div>
-
-    <!-- Enhanced search filter -->
-    <div class="search-container">
-        <div class="search-box">
-            <input type="text" placeholder="Search..." id="search-input">
-            <button type="button" onclick="searchFunction()">
-                🔍
-            </button>
-        </div>
-    </div>
-
-    <script>
-        // Function for search, can be expanded based on your search logic
-        function searchFunction() {
-            var query = document.getElementById('search-input').value;
-            alert('Search query: ' + query);
-        }
-    </script>
-
-</body>
-</html>
-
+<script>
+    function searchFunction() {
+        var query = document.getElementById('search-field').value;
+        console.log('Search query: ', query);
+        // Implement your search functionality here (Caspio search logic)
+    }
+</script>
