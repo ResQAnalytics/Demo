@@ -36,26 +36,32 @@
         .container {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 30px;
             margin-bottom: 20px;
         }
         .box {
-            width: 240px; /* Slightly wider for larger text */
-            padding: 20px;
+            width: 480px; /* Double the width for larger size */
+            height: 250px; /* Increase the height for larger content */
+            padding: 30px; /* Increased padding for larger content */
             background-color: rgba(0, 0, 0, 0.6);
             border: 1px solid #ccc;
             border-radius: 10px;
             text-align: center;
         }
         h1 {
-            font-size: 2em; /* Larger heading font size */
+            font-size: 2.5em; /* Increased header font size */
             font-weight: bold;
             color: #fff;
             margin-bottom: 15px;
         }
         p {
-            font-size: 1.5em; /* Larger font size for values */
+            font-size: 2em; /* Doubled the size of the values */
             font-weight: bold;
+        }
+
+        /* Caspio container styling */
+        .caspio-container {
+            font-size: 2em; /* Increase font size for Caspio embedded elements */
         }
     </style>
 </head>
@@ -71,19 +77,19 @@
     <div class="container">
         <div class="box">
             <h1>Number of Incidents</h1>
-            <p id="incidents">0</p> <!-- Replace '0' with Caspio calculated field -->
+            <p id="incidents" class="caspio-container">0</p> <!-- Replace '0' with Caspio calculated field -->
         </div>
         <div class="box">
             <h1>Time of Lifeguard Recognition</h1>
-            <p id="recognitionTime">0</p> <!-- Replace '0' with Caspio calculated field -->
+            <p id="recognitionTime" class="caspio-container">0</p> <!-- Replace '0' with Caspio calculated field -->
         </div>
         <div class="box">
             <h1>Lifeguard Hesitation Time</h1>
-            <p id="hesitationTime">0</p> <!-- Replace '0' with Caspio calculated field -->
+            <p id="hesitationTime" class="caspio-container">0</p> <!-- Replace '0' with Caspio calculated field -->
         </div>
         <div class="box">
             <h1>Lifeguard Response Time</h1>
-            <p id="responseTime">0</p> <!-- Replace '0' with Caspio calculated field -->
+            <p id="responseTime" class="caspio-container">0</p> <!-- Replace '0' with Caspio calculated field -->
         </div>
     </div>
 
@@ -132,7 +138,7 @@
             <script type="text/javascript" src="https://c2hbs301.caspio.com/dp/7e2fd000f4e582ccd2644b869ad9/emb"></script>
         </div>
     </div>
-    
+
     <script>
         // Password protection with page reload
         const password = "EAVS2024!";
@@ -151,3 +157,4 @@
     </script>
 </body>
 </html>
+
