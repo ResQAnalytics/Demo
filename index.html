@@ -3,107 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EAVS Dashboard</title>
+    <title>Dashboard</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #1e2a47; /* Dark blue background */
-            color: #fff;
         }
-        .header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        header {
             padding: 20px;
-        }
-        .header h1 {
-            font-size: 2.5em;
-            font-weight: bold;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            margin: 0 20px 0 0;
-        }
-        .header img {
-            width: 60px;
+            background: #333;
+            color: white;
+            text-align: center;
         }
         .container {
+            padding: 20px;
+        }
+        .search-container {
+            margin: 20px 0;
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
-            padding: 20px;
-        }
-        .box, .bottom-box {
-            width: 250px;
-            min-height: 150px;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.6);
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            text-align: center;
-            flex-grow: 1;
-        }
-        h1 {
-            font-size: 1.2em;
-            font-weight: bold;
-            margin: 10px 0;
-        }
-        .caspio-data {
-            font-size: 1.5em;
-            margin-top: 10px;
-        }
-        @media (max-width: 768px) {
-            .box, .bottom-box {
-                width: 100%;
-            }
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>EAVS Rescue Dashboard</h1>
-        <img src="https://www.paamusementparks.com/wp-content/uploads/2019/01/J-E-Rsk-Mngmt-Cnsltnt-copy.jpg" alt="Logo">
-    </div>
-
-    <!-- Top Boxes -->
+    <header>
+        <h1>Dashboard</h1>
+    </header>
     <div class="container">
-        <div class="box">
-            <h1>Number of Incidents</h1>
-            <div class="caspio-data" id="incidents">1239</div>
+        <!-- Search/Filter Field -->
+        <div class="search-container">
+            <script type="text/javascript" src="https://c2hbs301.caspio.com/dp/7e2fd00052a7fc8b5e694f7d9156/emb"></script>
         </div>
-        <div class="box">
-            <h1>Average Lifeguard Recognition Time</h1>
-            <div class="caspio-data" id="recognitionTime">00:00:35</div>
-        </div>
-        <div class="box">
-            <h1>Average Lifeguard Hesitation Time</h1>
-            <div class="caspio-data" id="hesitationTime">00:00:47</div>
-        </div>
-        <div class="box">
-            <h1>Average Lifeguard Response Time</h1>
-            <div class="caspio-data" id="responseTime">00:00:12</div>
-        </div>
-    </div>
 
-    <!-- Bottom Boxes -->
-    <div class="container">
-        <div class="bottom-box">
-            <h1>Incident</h1>
-            <script src="https://c2hbs301.caspio.com/dp/7e2fd00024aa4c829a7848bc84f4/emb"></script>
-        </div>
-        <div class="bottom-box">
-            <h1>Sex</h1>
-            <script src="https://c2hbs301.caspio.com/dp/7e2fd000d52b140d9cef4aa89c02/emb"></script>
-        </div>
-        <div class="bottom-box">
-            <h1>Guest Stage of Life</h1>
-            <script src="https://c2hbs301.caspio.com/dp/7e2fd000dd69e9e03beb446f9bfc/emb"></script>
-        </div>
-        <div class="bottom-box">
-            <h1>Proximate Cause</h1>
-            <script src="https://c2hbs301.caspio.com/dp/7e2fd000ccfea7040f7f4dc7a791/emb"></script>
+        <!-- Your main dashboard content -->
+        <div class="dashboard-content">
+            <p>Welcome to the dashboard! Your main content goes here.</p>
         </div>
     </div>
 </body>
 </html>
+
